@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    ports:
+      - "9090:8080"
+    networks:
+      - s-network
+
+
+
+  postgres:
+    image: mongo:latest
+    environment:
+      POSTGRES_DB: gmtek
+    ports:
+      - "27017:27017"
+    networks:
+      - s-network
+    volumes:
+      - mongodb-s-data:/var/lib/mongodb/data
+
+networks:
+  s-network:
+    driver: bridge
+
+volumes:
+  mongodb-s-data:
