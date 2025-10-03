@@ -1,0 +1,6 @@
+com\gmtek\docker_api\DockerApiApplication.class
+com\gmtek\docker_api\model\Student.class
+com\gmtek\docker_api\controller\StudentController.class
+com\gmtek\docker_api\repository\StudentRepository.class
+com\gmtek\docker_api\service\StudentService.class
+com\gmtek\docker_api\model\Student$StudentBuilder.class
