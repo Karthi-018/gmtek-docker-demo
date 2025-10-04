@@ -4,11 +4,9 @@ services:
   app:
     build: .
     ports:
-      - "9090:8080"
+      - "8080:8080"
     networks:
       - s-network
-
-
 
   postgres:
     image: mongo:latest
