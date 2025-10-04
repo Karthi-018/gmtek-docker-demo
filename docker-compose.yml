@@ -3,13 +3,19 @@ version: "3.7"
 services:
   app:
     build: .
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
     ports:
       - "8080:8080"
     networks:
       - s-network
 
-  postgres:
+  mongo:
     image: mongo:latest
+    container_name: mongo
     environment:
       POSTGRES_DB: gmtek
     ports:
@@ -17,11 +23,11 @@ services:
     networks:
       - s-network
     volumes:
-      - mongodb-s-data:/var/lib/mongodb/data
+      - mongo_data:/data/db
 
 networks:
   s-network:
     driver: bridge
 
 volumes:
-  mongodb-s-data:
+  mongo_data:

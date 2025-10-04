@@ -1,4 +1,4 @@
-# Created at 2025-10-04T11:17:57.100
+# Created at 2025-10-04T12:10:54.981
 Boot Manifest-JAR contains absolute paths in classpath 'G:\GM Tek\ref\Spring Boot + Mongodb Container\docker-api\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root
